@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styleForm.css">
+  </head>
+  <body>
+    <div class="main_content">
+        <h3>Form Primera Clase</h3>
+        <div>
+          <form action="">
+            <label for="fname">Nombre</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Nombre Alumno/a"
+              onchange=handelName()
+            /> 
+            <label for="lname">Apellido</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Apellido"
+            />
+            <input type="submit" value="Submit" />
+            <p id="fnameValue"></p>
+          </form>
+        </div>
+    </div>
+    <script>
+        function handelName() {
+          let student = document.getElementById("fname").value;
+          document.getElementById("fnameValue").innerHTML = "Nombre del alumno/a: " + student;
+        }
+        </script>
+  </body>
+</html>
